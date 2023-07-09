@@ -1,0 +1,32 @@
+#include <iostream>
+
+int addTwoAndTwo()
+{
+    const char* twoStr = "II";
+    const char* fourStr = "IV";
+
+    int sum = 0;
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (const char* ch = twoStr; *ch != '\0'; ch++)
+        {
+            sum++;
+        }
+    }
+
+    for (const char* ch = fourStr; *ch != '\0'; ch++)
+    {
+        sum++;
+    }
+
+    return sum;
+}
+
+int main()
+{
+    int result = addTwoAndTwo();
+    std::cout << "2 + 2 = " << result << std::endl;
+
+    return 0;
+}
